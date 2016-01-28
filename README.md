@@ -1,4 +1,4 @@
-# Supermodular2
+# Supermodular2 Ionic
 A super modular Ionic 2.x starter application.
 
 * Project's Home: https://github.com/skounis/supermodular2
