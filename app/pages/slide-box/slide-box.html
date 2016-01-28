@@ -1,0 +1,14 @@
+<ion-navbar *navbar>
+	<button menuToggle *ngIf="!selectedItem">
+		<icon menu></icon>
+	</button>
+	<ion-title>Slides</ion-title>
+</ion-navbar>
+
+<ion-content>
+	<ion-slides pager loop="true">
+		<ion-slide *ngFor="#item of items">
+			<img src="{{item.image}}" />
+		</ion-slide>
+	</ion-slides>
+</ion-content>

@@ -1,0 +1,16 @@
+<ion-navbar *navbar>
+	<button menuToggle>
+		<icon menu></icon>
+	</button>
+	<ion-title>WP posts</ion-title>
+</ion-navbar>
+
+<ion-content>
+	<ion-card *ngFor="#post of posts" (click)="itemTapped(post)">
+		<img *ngIf="!!post.image" src="{{post.image}}"/>
+		<ion-card-content>
+			<h2 class="card-title">{{post.title}}</h2>
+			<p>{{post.brief | trimHtml | truncate : 140}}</p>
+		</ion-card-content>
+	</ion-card>
+</ion-content>
