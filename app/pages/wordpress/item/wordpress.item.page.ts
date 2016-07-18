@@ -1,7 +1,8 @@
-import { Page, NavParams } from 'ionic-framework/ionic';
+import { Component } from '@angular/core';
+import { NavParams } from 'ionic-angular';
 import { Post } from '../models/post.model';
 
-@Page({
+@Component({
 	templateUrl: 'build/pages/wordpress/item/wordpress.item.html'
 })
 export class WordpressItemPage {

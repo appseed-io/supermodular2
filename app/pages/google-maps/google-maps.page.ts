@@ -1,16 +1,16 @@
-import { Page } from 'ionic-framework/ionic';
+import { Component } from '@angular/core';
 
 import {
-	ANGULAR2_GOOGLE_MAPS_PROVIDERS,
-	ANGULAR2_GOOGLE_MAPS_DIRECTIVES
+	GOOGLE_MAPS_DIRECTIVES,
+	GOOGLE_MAPS_PROVIDERS
 } from 'angular2-google-maps/core';
 
 import { Marker, Point } from './interfaces';
 
-@Page({
+@Component({
 	templateUrl: 'build/pages/google-maps/google-maps.html',
-	directives: [ANGULAR2_GOOGLE_MAPS_DIRECTIVES],
-	providers: [ANGULAR2_GOOGLE_MAPS_PROVIDERS]
+	directives: [GOOGLE_MAPS_DIRECTIVES],
+	providers: [GOOGLE_MAPS_PROVIDERS]
 })
 export class GoogleMapsPage {
 	public markers: Marker[];

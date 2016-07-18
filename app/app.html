@@ -6,8 +6,9 @@
 
 	<ion-content>
 		<ion-list>
-			<ion-item *ngFor="#p of pages" (click)="openPage(p)">
-				<icon [name]="p.icon" item-left></icon>{{p.title}}
+			<ion-item *ngFor="let p of pages" (click)="openPage(p)">
+				<ion-icon [name]="p.icon" item-left></ion-icon>
+				{{p.title}}
 			</ion-item>
 		</ion-list>
 	</ion-content>

@@ -1,4 +1,5 @@
-import { Page, Nav } from 'ionic-framework/ionic';
+import { Component } from '@angular/core';
+import { Nav, IONIC_DIRECTIVES } from 'ionic-angular';
 
 import { WordpressListPage } from '../wordpress/list/wordpress.list.page';
 import { SlideBoxPage } from '../slide-box/slide-box.page';
@@ -11,9 +12,10 @@ import { MapsService } from '../../services/maps.service';
 import { InAppBrowserService } from '../../services/in-app-browser.service';
 import { data } from './home-data';
 
-@Page({
+@Component({
 	templateUrl: 'build/pages/home/home.html',
-	providers: []
+	providers: [],
+	directives: [IONIC_DIRECTIVES]
 })
 export class HomePage {
 	public tiles: Tile[][];
@@ -63,7 +65,7 @@ export class HomePage {
 		this.tiles = [[{
 			title: 'Wordpress',
 			path: 'wordpress-articles',
-			icon: 'ion-social-wordpress',
+			icon: 'logo-wordpress',
 			component: WordpressListPage
 		}, {
 			title: 'Slides',

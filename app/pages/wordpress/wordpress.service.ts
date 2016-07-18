@@ -1,7 +1,7 @@
-import { Injectable } from 'angular2/core';
-import { Http } from 'angular2/http';
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 import { Config } from '../../config';
-import { Observable } from 'rxjs/observable';
+import { Observable } from 'rxjs';
 import { Post } from './models/post.model';
 
 @Injectable()

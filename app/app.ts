@@ -1,4 +1,7 @@
-import { App, IonicApp, Platform } from 'ionic-framework/ionic';
+import { Component } from '@angular/core';
+
+import { App, Platform, IONIC_DIRECTIVES, MenuController, Nav, ionicBootstrap } from 'ionic-angular';
+import { ViewChild } from '@angular/core';
 
 import 'rxjs/add/operator/map';
 
@@ -12,17 +15,21 @@ import { CallService } from './services/call.service';
 import { MapsService } from './services/maps.service';
 import { InAppBrowserService } from './services/in-app-browser.service';
 
-@App({
+@Component({
 	templateUrl: 'build/app.html',
-	providers: [Config, EmailService, CallService, MapsService, InAppBrowserService]
+	directives: [IONIC_DIRECTIVES]
 })
 class MyApp {
 	private app;
 	private platform;
 	private pages;
 	private rootPage;
+	private menu: MenuController;
 
-	constructor(app: IonicApp, platform: Platform) {
+	@ViewChild(Nav) nav: Nav;
+
+	constructor(app: App, platform: Platform, menu: MenuController) {
+		this.menu = menu;
 		// set up our app
 		this.app = app;
 		this.platform = platform;
@@ -31,7 +38,7 @@ class MyApp {
 		// set our app's pages
 		this.pages = [
 			{ title: 'Home', component: HomePage, icon: 'home' },
-			{ title: 'Wordpress', component: WordpressListPage, icon: 'ion-social-wordpress' },
+			{ title: 'Wordpress', component: WordpressListPage, icon: 'logo-wordpress' },
 			{ title: 'Slides', component: SlideBoxPage, icon: 'swap' },
 			{ title: 'Google maps', component: GoogleMapsPage, icon: 'map' }
 		];
@@ -63,9 +70,12 @@ class MyApp {
 
 	openPage(page) {
 		// close the menu when clicking a link from the menu
-		this.app.getComponent('leftMenu').close();
+		this.menu.close();
 		// navigate to the new page if it is not the current page
-		let nav = this.app.getComponent('nav');
-		nav.setRoot(page.component);
+		this.nav.setRoot(page.component);
 	}
 }
+
+ionicBootstrap(MyApp, [
+	Config, EmailService, CallService, MapsService, InAppBrowserService
+]);
