@@ -1,6 +1,6 @@
-import { Page } from 'ionic-framework/ionic';
+import { Component } from '@angular/core';
 
-@Page({
+@Component({
 	templateUrl: 'build/pages/slide-box/slide-box.html'
 })
 export class SlideBoxPage {

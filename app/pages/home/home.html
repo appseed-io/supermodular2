@@ -1,9 +1,11 @@
-<ion-navbar *navbar>
-	<button menuToggle>
-		<icon menu></icon>
-	</button>
-	<ion-title>Supermodular 2</ion-title>
-</ion-navbar>
+<ion-header>
+	<ion-navbar>
+		<button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Supermodular 2</ion-title>
+	</ion-navbar>
+</ion-header>
 
 <ion-content class="getting-started">
 	<div class="home-hello">
@@ -15,12 +17,12 @@
 		</div>
 	</div>
 
-	<ion-row *ngFor="#tilePair of tiles">
-		<ion-col *ngFor="#tile of tilePair">
+	<ion-row *ngFor="let tilePair of tiles">
+		<ion-col *ngFor="let tile of tilePair">
 			<ion-card class="tile" (click)="navigateTo(tile)">
 				<ion-card-content>
 					<ion-item>
-						<h1><icon [name]="tile.icon"></icon></h1>
+						<h1><ion-icon [name]="tile.icon"></ion-icon></h1>
 						<h2>{{tile.title}}</h2>
 					</ion-item>
 				</ion-card-content>
@@ -31,7 +33,7 @@
 	<ion-row>
 		<ion-card class="quick-action" (click)="callUs()">
 			<ion-card-content>
-				<icon phone-portrait></icon>
+				<ion-icon name="phone-portrait"></ion-icon>
 				<span>Call us</span>
 			</ion-card-content>
 		</ion-card>
@@ -40,7 +42,7 @@
 	<ion-row>
 		<ion-card class="quick-action" (click)="sendEmail()">
 			<ion-card-content>
-				<icon mail></icon>
+				<ion-icon name="mail"></ion-icon>
 				<span>Send us and Email</span>
 			</ion-card-content>
 		</ion-card>
@@ -49,7 +51,7 @@
 	<ion-row>
 		<ion-card class="quick-action" (click)="getDirections()">
 			<ion-card-content>
-				<icon compass></icon>
+				<ion-icon name="compass"></ion-icon>
 				<span>Find us / Get directions</span>
 			</ion-card-content>
 		</ion-card>
@@ -58,7 +60,7 @@
 	<ion-row>
 		<ion-card class="quick-action" (click)="openFacebookPage()">
 			<ion-card-content>
-				<icon ion-social-facebook></icon>
+				<ion-icon name="logo-facebook"></ion-icon>
 				<span>Visit us on Facebook</span>
 			</ion-card-content>
 		</ion-card>

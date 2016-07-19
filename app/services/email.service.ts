@@ -1,4 +1,4 @@
-import { Injectable } from 'angular2/core';
+import { Injectable } from '@angular/core';
 
 class Email {
 	to: string;
@@ -9,8 +9,9 @@ class Email {
 @Injectable()
 export class EmailService {
 	public sendEmail(email: Email) {
-		window.cordova.plugins.email.isAvailable(() => {
-			window.cordova.plugins.email.open(email);
+		let plugins: any = window.cordova.plugins;
+		plugins.email.isAvailable(() => {
+			plugins.email.open(email);
 		});
 	}
 }

@@ -1,5 +1,7 @@
-import { OnInit } from 'angular2/core';
-import { Page, NavController } from 'ionic-framework/ionic';
+import { Component } from '@angular/core';
+
+import { OnInit } from '@angular/core';
+import { NavController } from 'ionic-angular';
 
 import { WordpressService } from './../wordpress.service.ts';
 import { TruncatePipe } from '../../../pipes/truncate.pipe.ts';
@@ -7,7 +9,7 @@ import { TrimHtmlPipe } from '../../../pipes/trim-html.pipe.ts';
 import { WordpressItemPage } from '../item/wordpress.item.page';
 import { Post } from '../models/post.model';
 
-@Page({
+@Component({
 	templateUrl: 'build/pages/wordpress/list/wordpress.list.html',
 	providers: [WordpressService],
 	pipes: [TruncatePipe, TrimHtmlPipe]

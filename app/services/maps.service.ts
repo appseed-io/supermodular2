@@ -1,5 +1,5 @@
-import { Injectable } from 'angular2/core';
-import { Platform } from 'ionic-framework/ionic';
+import { Injectable } from '@angular/core';
+import { Platform } from 'ionic-angular';
 
 @Injectable()
 export class MapsService {
@@ -11,7 +11,7 @@ export class MapsService {
 
 	public openMapsApp(location: any) {
 		let q;
-		if (this.platform.isPlatform('android')) {
+		if (this.platform.is('android')) {
 			q = 'geo:' + location;
 		} else {
 			q = 'maps://maps.apple.com/?q=' + location;

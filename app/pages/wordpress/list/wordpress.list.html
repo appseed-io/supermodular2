@@ -1,12 +1,14 @@
-<ion-navbar *navbar>
-	<button menuToggle>
-		<icon menu></icon>
-	</button>
-	<ion-title>WP posts</ion-title>
-</ion-navbar>
+<ion-header>
+	<ion-navbar>
+		<button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>WP posts</ion-title>
+	</ion-navbar>
+</ion-header>
 
 <ion-content>
-	<ion-card *ngFor="#post of posts" (click)="itemTapped(post)">
+	<ion-card *ngFor="let post of posts" (click)="itemTapped(post)">
 		<img *ngIf="!!post.image" src="{{post.image}}"/>
 		<ion-card-content>
 			<h2 class="card-title">{{post.title}}</h2>
