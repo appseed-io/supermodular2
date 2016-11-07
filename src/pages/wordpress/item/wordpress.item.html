@@ -1,0 +1,20 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>WP post</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-card>
+		<img *ngIf="!!post.image" src="{{post.image}}"/>
+		<ion-card-content>
+			<h2 class="card-title">{{post.title}}</h2>
+			<div [innerHTML]="post.content"></div>
+			<p><strong>{{post.author}}</strong> - {{post.date}}</p>
+			<p><i>[{{post.tags.join(', ')}}]</i></p>
+		</ion-card-content>
+	</ion-card>
+</ion-content>

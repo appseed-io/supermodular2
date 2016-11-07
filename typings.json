@@ -1,9 +1,0 @@
-{
-  "dependencies": {},
-  "devDependencies": {},
-  "globalDependencies": {
-    "cordova": "registry:dt/cordova#0.0.0+20160316155526",
-    "cordova/plugins/statusbar": "registry:dt/cordova/plugins/statusbar#0.0.0+20160316155526",
-    "es6-shim": "registry:dt/es6-shim#0.31.2+20160602141504"
-  }
-}

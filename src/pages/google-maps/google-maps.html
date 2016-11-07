@@ -1,0 +1,23 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle *ngIf="!selectedItem">
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Google maps</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<sebm-google-map style="width: 100%; height: 100%;"
+			[latitude]="origin.lat"
+			[longitude]="origin.lng"
+			[zoom]="zoom">
+		<sebm-google-map-marker
+				*ngFor="let m of markers"
+				(markerClick)="clickedMarker(m.label)"
+				[latitude]="m.lat"
+				[longitude]="m.lng"
+				[label]="m.label">
+		</sebm-google-map-marker>
+	</sebm-google-map>
+</ion-content>
