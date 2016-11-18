@@ -9,7 +9,7 @@ export class Email {
 @Injectable()
 export class EmailService {
 	public sendEmail(email: Email) {
-		let plugins: any = window['cordova'].plugins;
+		let plugins: any = (<any>window).cordova.plugins;
 		plugins.email.isAvailable(() => {
 			plugins.email.open(email);
 		});

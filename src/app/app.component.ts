@@ -14,10 +14,11 @@ import { GoogleMapsPage } from '../pages/google-maps/google-maps.page';
 	templateUrl: 'app.html'
 })
 export class MyApp {
+	pages;
+	rootPage;
+
 	private app;
 	private platform;
-	private pages;
-	private rootPage;
 	private menu: MenuController;
 
 	@ViewChild(Nav) nav: Nav;
