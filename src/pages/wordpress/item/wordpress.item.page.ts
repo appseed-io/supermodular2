@@ -6,7 +6,7 @@ import { Post } from '../models/post.model';
 	templateUrl: 'wordpress.item.html'
 })
 export class WordpressItemPage {
-	private post: Post;
+	post: Post;
 
 	constructor(navParams: NavParams) {
 		this.post = <Post>navParams.get('item');

@@ -14,3 +14,58 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+@media (min-width: 768px) {
+	.ion-page {
+		margin-left: 30%;
+		width: 70%;
+	}
+
+	ion-menu {
+		width: 30%;
+		display: block;
+	}
+
+	.bar-button-menutoggle {
+		display: none;
+	}
+
+	ion-menu ion-backdrop {
+		display: none;
+	}
+
+	ion-content {
+		border-left: none;
+	}
+
+	ion-menu[type=overlay] .menu-inner {
+		-webkit-transform: translateX(0px) !important;
+		transform: translateX(0px) !important;
+		box-shadow: none;
+		width: 100%;
+	}
+
+	.card-background-page {
+		ion-card {
+			position: relative;
+			text-align: center;
+		}
+
+		.card-title {
+			position: absolute;
+			top: 36%;
+			font-size: 2.0em;
+			width: 100%;
+			font-weight: bold;
+			color: #fff;
+		}
+
+		.card-subtitle {
+			font-size: 1.0em;
+			position: absolute;
+			top: 52%;
+			width: 100%;
+			color: #fff;
+		}
+	}
+}

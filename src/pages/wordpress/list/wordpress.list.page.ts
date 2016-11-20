@@ -1,8 +1,5 @@
-import { Component } from '@angular/core';
-
-import { OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
-
 import { WordpressService } from './../wordpress.service';
 import { WordpressItemPage } from '../item/wordpress.item.page';
 import { Post } from '../models/post.model';
@@ -12,10 +9,10 @@ import { Post } from '../models/post.model';
 	providers: [WordpressService]
 })
 export class WordpressListPage implements OnInit {
+	public posts: Post[];
+
 	private wordpressService: WordpressService;
 	private nav: NavController;
-
-	public posts: Post[];
 
 	constructor(wordpressService: WordpressService, nav: NavController) {
 		this.wordpressService = wordpressService;

@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 
-import { Marker, Point } from './interfaces';
+import { IMarker, IPoint } from './interfaces';
 
 @Component({
 	templateUrl: 'google-maps.html'
 })
 export class GoogleMapsPage {
-	public markers: Marker[];
-	public origin: Point;
+	public markers: IMarker[];
+	public origin: IPoint;
 	public zoom: number;
 
 	constructor() {

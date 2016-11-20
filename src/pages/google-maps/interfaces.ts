@@ -1,8 +1,8 @@
-export interface Point {
+export interface IPoint {
 	lat: number;
 	lng: number;
 }
 
-export interface Marker extends Point {
+export interface IMarker extends IPoint {
 	label?: string;
 }
