@@ -27,6 +27,7 @@
     "es6-promise": "3.0.2",
     "es6-shim": "^0.35.0",
     "ionic-angular": "2.0.0-rc.3",
+    "ionic-native": "^2.2.7",
     "ionicons": "3.0.0",
     "ng2-cordova-oauth": "0.0.6",
     "rxjs": "5.0.0-beta.12",
