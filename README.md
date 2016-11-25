@@ -3,6 +3,8 @@ A super modular Ionic 2.x starter application.
 
 * Project's Home: https://github.com/skounis/supermodular2
 
+> Need more? Don't miss [Barebone Ionic 2](http://appseed.io/barebone-ionic-2), The Swiss Arny Knife of Ionic2!
+
 ## Dependecies, Run and Build
 
 ### Install Ionic CLI 2.x
