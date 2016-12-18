@@ -1,6 +1,5 @@
 import { IonicModule } from 'ionic-angular';
 import { NgModule } from '@angular/core';
-
 import { ComponentsInputsStackedLabelsPage } from './inputs/stacked-labels/components.inputs.stacked-labels.page';
 import { ComponentsInputsPlaceholderLabelsPage } from './inputs/placeholder-labels/components.inputs.placeholder-labels.page';
 import { ComponentsInputsInsetLabelsPage } from './inputs/inset-labels/components.inputs.inset-labels.page';

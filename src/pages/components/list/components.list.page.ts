@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-
 import { NavController } from 'ionic-angular';
-
 import { ComponentsActionSheetPage } from '../actionsheet/components.actionsheet.page';
 import { ComponentsAlertsPage } from '../alerts/components.alerts.page';
 import { ComponentsBadgesPage } from '../badges/components.badges.page';
@@ -15,54 +13,55 @@ import { ComponentsIconsPage } from '../icons/components.icons.page';
 import { ComponentsInputsListPage } from '../inputs/components.inputs-list.page';
 
 @Component({
-  templateUrl: 'components.list.html'
+	templateUrl: 'components.list.html'
 })
 export class ComponentsListPage {
-  constructor(
-    private navCtrl: NavController
-  ) { }
+	constructor(
+		private navCtrl: NavController
+	) {
+	}
 
-  public actionsheetTapped() {
+	public actionsheetTapped() {
 		this.navCtrl.push(ComponentsActionSheetPage);
 	}
 
-  public alertsTapped() {
+	public alertsTapped() {
 		this.navCtrl.push(ComponentsAlertsPage);
 	}
 
-  public badgesTapped() {
+	public badgesTapped() {
 		this.navCtrl.push(ComponentsBadgesPage);
 	}
 
-  public buttonsTapped() {
+	public buttonsTapped() {
 		this.navCtrl.push(ComponentsButtonsPage);
 	}
 
-  public cardsTapped() {
+	public cardsTapped() {
 		this.navCtrl.push(ComponentsCardsPage);
 	}
 
-  public checkboxTapped() {
+	public checkboxTapped() {
 		this.navCtrl.push(ComponentsCheckboxPage);
 	}
 
-  public floatingActionButtonsTapped() {
-    this.navCtrl.push(ComponentsFloatingActionButtonsPage);
-  }
+	public floatingActionButtonsTapped() {
+		this.navCtrl.push(ComponentsFloatingActionButtonsPage);
+	}
 
-  public gesturesTapped() {
-    this.navCtrl.push(ComponentsGesturesPage);
-  }
+	public gesturesTapped() {
+		this.navCtrl.push(ComponentsGesturesPage);
+	}
 
-  public gridTapped() {
-    this.navCtrl.push(ComponentsGridPage);
-  }
+	public gridTapped() {
+		this.navCtrl.push(ComponentsGridPage);
+	}
 
-  public iconsTapped() {
-    this.navCtrl.push(ComponentsIconsPage);
-  }
+	public iconsTapped() {
+		this.navCtrl.push(ComponentsIconsPage);
+	}
 
-  public inputsTapped() {
-    this.navCtrl.push(ComponentsInputsListPage);
-  }
+	public inputsTapped() {
+		this.navCtrl.push(ComponentsInputsListPage);
+	}
 }

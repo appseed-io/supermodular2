@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-
 import { NavController } from 'ionic-angular';
-
 import { ComponentsInputsFixedLabelsPage } from './fixed-labels/components.inputs.fixed-labels.page';
 import { ComponentsInputsFloatingLabelsPage } from './floating-labels/components.inputs.floating-labels.page';
 import { ComponentsInputsInlineLabelsPage } from './inline-labels/components.inputs.inline-labels.page';
@@ -10,34 +8,35 @@ import { ComponentsInputsPlaceholderLabelsPage } from './placeholder-labels/comp
 import { ComponentsInputsStackedLabelsPage } from './stacked-labels/components.inputs.stacked-labels.page';
 
 @Component({
-  templateUrl: 'components.inputs-list.html'
+	templateUrl: 'components.inputs-list.html'
 })
 export class ComponentsInputsListPage {
-  constructor(
-    private navCtrl: NavController
-  ) { }
+	constructor(
+		private navCtrl: NavController
+	) {
+	}
 
-  public fixedLabelsTapped() {
-    this.navCtrl.push(ComponentsInputsFixedLabelsPage);
-  }
+	public fixedLabelsTapped() {
+		this.navCtrl.push(ComponentsInputsFixedLabelsPage);
+	}
 
-  public floatingLabelsTapped() {
-    this.navCtrl.push(ComponentsInputsFloatingLabelsPage);
-  }
+	public floatingLabelsTapped() {
+		this.navCtrl.push(ComponentsInputsFloatingLabelsPage);
+	}
 
-  public inlineLabelsTapped() {
-    this.navCtrl.push(ComponentsInputsInlineLabelsPage);
-  }
+	public inlineLabelsTapped() {
+		this.navCtrl.push(ComponentsInputsInlineLabelsPage);
+	}
 
-  public insetLabelsTapped() {
-    this.navCtrl.push(ComponentsInputsInsetLabelsPage);
-  }
+	public insetLabelsTapped() {
+		this.navCtrl.push(ComponentsInputsInsetLabelsPage);
+	}
 
-  public placeholderLabelsTapped() {
-    this.navCtrl.push(ComponentsInputsPlaceholderLabelsPage);
-  }
+	public placeholderLabelsTapped() {
+		this.navCtrl.push(ComponentsInputsPlaceholderLabelsPage);
+	}
 
-  public stackedLabelsTapped() {
-    this.navCtrl.push(ComponentsInputsStackedLabelsPage);
-  }
+	public stackedLabelsTapped() {
+		this.navCtrl.push(ComponentsInputsStackedLabelsPage);
+	}
 }
