@@ -1,15 +1,13 @@
-import { ViewChild } from '@angular/core';
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { StatusBar } from '@ionic-native/status-bar';
 
-import { App, Platform, MenuController, Nav } from 'ionic-angular';
-import { StatusBar } from 'ionic-native';
-
+import { App, MenuController, Nav, Platform } from 'ionic-angular';
+import { ComponentsListPage } from '../pages/components/list/components.list.page';
+import { GoogleMapsPage } from '../pages/google-maps/google-maps.page';
 
 import { HomePage } from '../pages/home/home.page';
-import { WordpressListPage } from '../pages/wordpress/list/wordpress.list.page';
 import { SlideBoxPage } from '../pages/slide-box/slide-box.page';
-import { GoogleMapsPage } from '../pages/google-maps/google-maps.page';
-import { ComponentsListPage } from '../pages/components/list/components.list.page';
+import { WordpressListPage } from '../pages/wordpress/list/wordpress.list.page';
 
 @Component({
 	templateUrl: 'app.html'
@@ -24,7 +22,7 @@ export class MyApp {
 
 	@ViewChild(Nav) nav: Nav;
 
-	constructor(app: App, platform: Platform, menu: MenuController) {
+	constructor(app: App, platform: Platform, menu: MenuController, private statusBar: StatusBar) {
 		this.menu = menu;
 		this.app = app;
 		this.platform = platform;
@@ -44,7 +42,7 @@ export class MyApp {
 
 	initializeApp() {
 		this.platform.ready().then(() => {
-			StatusBar.styleDefault();
+			this.statusBar.styleDefault();
 		});
 	}
 
