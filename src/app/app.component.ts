@@ -16,16 +16,14 @@ export class MyApp {
 	pages;
 	rootPage;
 
-	private app;
-	private platform;
-	private menu: MenuController;
-
 	@ViewChild(Nav) nav: Nav;
 
-	constructor(app: App, platform: Platform, menu: MenuController, private statusBar: StatusBar) {
-		this.menu = menu;
-		this.app = app;
-		this.platform = platform;
+	constructor(
+		private app: App,
+		private platform: Platform,
+		private menu: MenuController,
+		private statusBar: StatusBar,
+	) {
 		this.initializeApp();
 
 		// set our app's pages
