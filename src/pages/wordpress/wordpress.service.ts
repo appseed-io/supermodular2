@@ -42,5 +42,5 @@ export class WordpressService {
 			tags: tags,
 			url: this.config.wordpressApiUrl
 		};
-	};
+	}
 }
