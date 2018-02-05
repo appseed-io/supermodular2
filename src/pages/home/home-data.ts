@@ -1,4 +1,4 @@
-export var data = {
+export const data = {
 	facebook: 'https://www.facebook.com/ionicframework',
 	phoneNumber: '+306973216110',
 	email: {
