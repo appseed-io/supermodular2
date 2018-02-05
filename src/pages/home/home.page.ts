@@ -19,23 +19,15 @@ import { data } from './home-data';
 export class HomePage {
 	public tiles: Tile[][];
 
-	private emailService: EmailService;
-	private callService: CallService;
-	private mapsService: MapsService;
-	private browserService: InAppBrowserService;
 	private nav: Nav;
 
 	constructor(
-		emailService: EmailService,
-		callService: CallService,
-		mapsService: MapsService,
-		browserService: InAppBrowserService,
+		private emailService: EmailService,
+		private callService: CallService,
+		private mapsService: MapsService,
+		private browserService: InAppBrowserService,
 		nav: Nav
 	) {
-		this.emailService = emailService;
-		this.callService = callService;
-		this.mapsService = mapsService;
-		this.browserService = browserService;
 		this.nav = nav;
 		this.initTiles();
 	}

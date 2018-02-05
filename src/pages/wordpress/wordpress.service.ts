@@ -6,14 +6,12 @@ import { Post } from './models/post.model';
 
 @Injectable()
 export class WordpressService {
-	private http: Http;
-	private config: Config;
 	private articles: Post[];
 
-	constructor(http: Http, config: Config) {
-		this.http = http;
-		this.config = config;
-	}
+	constructor(
+		private http: Http,
+		private config: Config
+	) {}
 
 	public getPosts(): Observable<Post[]> {
 		return this.http.get(this.config.wordpressApiUrl)
@@ -42,5 +40,5 @@ export class WordpressService {
 			tags: tags,
 			url: this.config.wordpressApiUrl
 		};
-	}
+	};
 }
