@@ -3,7 +3,7 @@ A super modular Ionic 2.x starter application.
 
 * Project's Home: https://github.com/skounis/supermodular2
 
-> Need more? Don't miss [Barebone Ionic 2](http://appseed.io/barebone-ionic-2), The Swiss Arny Knife of Ionic2!
+> Need more? Don't miss [Ionic 3 Toolkit](http://appseed.io/ionic-3-toolkit), The Swiss Arny Knife of Ionic3!
 
 ## Dependecies, Run and Build
 
