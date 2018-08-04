@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { StatusBar } from '@ionic-native/status-bar';
 
-import { App, MenuController, Nav, Platform } from 'ionic-angular';
+import { MenuController, Nav, Platform } from 'ionic-angular';
 import { ComponentsListPage } from '../pages/components/list/components.list.page';
 import { GoogleMapsPage } from '../pages/google-maps/google-maps.page';
 
@@ -19,7 +19,6 @@ export class MyApp {
 	@ViewChild(Nav) nav: Nav;
 
 	constructor(
-		private app: App,
 		private platform: Platform,
 		private menu: MenuController,
 		private statusBar: StatusBar,
