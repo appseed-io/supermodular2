@@ -1,51 +1,50 @@
-import { Component, ViewChild } from '@angular/core';
-import { StatusBar } from '@ionic-native/status-bar';
+import { Component } from '@angular/core';
 
-import { App, MenuController, Nav, Platform } from 'ionic-angular';
-import { ComponentsListPage } from '../pages/components/list/components.list.page';
-import { GoogleMapsPage } from '../pages/google-maps/google-maps.page';
-
-import { HomePage } from '../pages/home/home.page';
-import { SlideBoxPage } from '../pages/slide-box/slide-box.page';
-import { WordpressListPage } from '../pages/wordpress/list/wordpress.list.page';
+import { Platform, MenuController } from '@ionic/angular';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { HomePage } from './pages/home/home.page';
+import { SlideBoxPage } from './pages/slide-box/slide-box.page';
+import { GoogleMapsPage } from './pages/google-maps/google-maps.page';
 
 @Component({
-	templateUrl: 'app.html'
+  selector: 'app-root',
+  templateUrl: 'app.component.html',
+  styleUrls: ['./app.component.scss']
 })
-export class MyApp {
-	pages;
-	rootPage;
-
-	@ViewChild(Nav) nav: Nav;
+export class AppComponent {
+	pages: any[];
+	rootPage: any;
 
 	constructor(
-		private app: App,
 		private platform: Platform,
-		private menu: MenuController,
+		private splashScreen: SplashScreen,
 		private statusBar: StatusBar,
+		private menu: MenuController
 	) {
 		this.initializeApp();
 
 		// set our app's pages
 		this.pages = [
-			{ title: 'Home', component: HomePage, icon: 'home' },
-			{ title: 'Wordpress', component: WordpressListPage, icon: 'logo-wordpress' },
-			{ title: 'Slides', component: SlideBoxPage, icon: 'swap' },
-			{ title: 'Google maps', component: GoogleMapsPage, icon: 'map' },
-			{ title: 'Components', component: ComponentsListPage, icon: 'grid' }
+			{ title: 'Home', path: '/', icon: 'home' },
+			{ title: 'Wordpress', path: '/wordpress-articles', icon: 'logo-wordpress' },
+			{ title: 'Slides', path: '/slides', icon: 'swap' },
+			{ title: 'Google maps', path: '/map', icon: 'map' },
+			{ title: 'Components', path: '/components', icon: 'grid' },
 		];
 
 		this.rootPage = HomePage;
+		this.menu.open('start');
+	}
+
+	closeMenu() {
+		this.menu.close();
 	}
 
 	initializeApp() {
 		this.platform.ready().then(() => {
 			this.statusBar.styleDefault();
+			this.splashScreen.hide();
 		});
-	}
-
-	openPage(page) {
-		this.menu.close();
-		this.nav.setRoot(page.component);
 	}
 }

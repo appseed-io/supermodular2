@@ -1,0 +1,139 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>Cards</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-card>
+		<ion-card-content>
+			This is just your basic card with some text to boot.
+		</ion-card-content>
+	</ion-card>
+
+	<ion-card>
+		<ion-card-header>
+			Header
+		</ion-card-header>
+		<ion-card-content>
+			This is a card with some text and a header.
+		</ion-card-content>
+	</ion-card>
+
+	<ion-card>
+		<ion-card-header>
+			List In Card
+		</ion-card-header>
+
+		<ion-list>
+			<ion-item>
+				<ion-icon name='cart' slot="start"></ion-icon>
+				<ion-label>Shopping</ion-label>
+			</ion-item>
+
+			<ion-item>
+				<ion-icon name='medical' slot="start"></ion-icon>
+				<ion-label>Hospital</ion-label>
+			</ion-item>
+
+			<ion-item>
+				<ion-icon name='cafe' slot="start"></ion-icon>
+				<ion-label>Cafe</ion-label>
+			</ion-item>
+
+			<ion-item>
+				<ion-icon name='paw' slot="start"></ion-icon>
+				<ion-label>Dog Park</ion-label>
+			</ion-item>
+
+			<ion-item>
+				<ion-icon name='beer' slot="start"></ion-icon>
+				<ion-label>Pub</ion-label>
+			</ion-item>
+
+			<ion-item>
+				<ion-icon name='planet' slot="start"></ion-icon>
+				<ion-label>Space</ion-label>
+			</ion-item>
+		</ion-list>
+	</ion-card>
+
+	<ion-card>
+		<img src="assets/img/bjork-live.jpg"/>
+		<ion-card-content>
+			<ion-card-title>
+				Björk
+			</ion-card-title>
+			<p>
+				Björk first came to prominence as one of the lead vocalists of the avant pop Icelandic sextet the
+				Sugarcubes, but when...
+			</p>
+		</ion-card-content>
+		<ion-row no-padding>
+			<ion-col>
+				<ion-button fill="clear" size="small" color="danger">
+					<ion-icon name='star'></ion-icon>
+					Favorite
+				</ion-button>
+			</ion-col>
+			<ion-col text-center>
+				<ion-button fill="clear" size="small" color="danger">
+					<ion-icon name='musical-notes'></ion-icon>
+					Listen
+				</ion-button>
+			</ion-col>
+			<ion-col text-right>
+				<ion-button fill="clear" size="small" color="danger">
+					<ion-icon name='share-alt'></ion-icon>
+					Share
+				</ion-button>
+			</ion-col>
+		</ion-row>
+	</ion-card>
+	<div class="card-background-page">
+		<ion-card>
+			<img src="assets/img/bjork-live.jpg"/>
+			<div class="card-title">Björk</div>
+			<div class="card-subtitle">9 Albums</div>
+		</ion-card>
+	</div>
+	<ion-card>
+		<ion-item>
+			<ion-avatar item-left>
+				<img src="assets/img/marty-avatar.png">
+			</ion-avatar>
+			<h2>Marty McFly</h2>
+			<p>November 5, 1955</p>
+		</ion-item>
+
+		<img src="assets/img/advance-card-bttf.png">
+
+		<ion-card-content>
+			<p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
+				DeLorean?! Whoa. This is heavy.</p>
+		</ion-card-content>
+
+		<ion-row no-padding>
+			<ion-col>
+				<ion-button fill="clear" size="small" color="primary">
+					<ion-icon name='thumbs-up'></ion-icon>
+					12 Likes
+				</ion-button>
+			</ion-col>
+			<ion-col text-center>
+				<ion-button fill="clear" size="small" color="primary">
+					<ion-icon name='text'></ion-icon>
+					4 Comments
+				</ion-button>
+			</ion-col>
+			<ion-col center text-center>
+				<ion-note>
+					11h ago
+				</ion-note>
+			</ion-col>
+		</ion-row>
+	</ion-card>
+</ion-content>

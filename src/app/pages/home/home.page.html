@@ -1,0 +1,74 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>home</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="getting-started">
+	<div class="home-hello">
+		<img src="http://lorempixel.com/g/640/480/technics" />
+
+		<div class="hello-title" text-wrap>
+			<h1>ABC Corp Inc.</h1>
+			50 Market Street, San Francisco, California 94103, United States
+		</div>
+	</div>
+
+	<ion-row *ngFor="let tilePair of tiles">
+		<ion-col *ngFor="let tile of tilePair">
+			<ion-card class="tile">
+				<ion-card-content>
+					<ion-item
+						[href]="tile.path">
+						<div class="tile-item-wrapper">
+							<h1><ion-icon [name]="tile.icon"></ion-icon></h1>
+							<h2>{{tile.title}}</h2>
+						</div>
+					</ion-item>
+				</ion-card-content>
+			</ion-card>
+		</ion-col>
+	</ion-row>
+
+	<ion-row>
+		<ion-card class="quick-action" (click)="callUs()">
+			<ion-card-content>
+				<ion-icon name="phone-portrait"></ion-icon>
+				<span>Call us</span>
+			</ion-card-content>
+		</ion-card>
+	</ion-row>
+
+	<ion-row>
+		<ion-card class="quick-action" (click)="sendEmail()">
+			<ion-card-content>
+				<ion-icon name="mail"></ion-icon>
+				<span>Send us and Email</span>
+			</ion-card-content>
+		</ion-card>
+	</ion-row>
+
+	<ion-row>
+		<ion-card class="quick-action" (click)="getDirections()">
+			<ion-card-content>
+				<ion-icon name="compass"></ion-icon>
+				<span>Find us / Get directions</span>
+			</ion-card-content>
+		</ion-card>
+	</ion-row>
+
+	<ion-row>
+		<ion-card (click)="openFacebookPage()">
+			<ion-card-content>
+				<div class="quick-action">
+					<ion-icon name="logo-facebook"></ion-icon>
+					<span>Visit us on Facebook</span>
+				</div>
+			</ion-card-content>
+		</ion-card>
+	</ion-row>
+
+</ion-content>

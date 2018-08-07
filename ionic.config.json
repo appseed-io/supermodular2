@@ -1,6 +1,5 @@
 {
   "name": "supermodular2",
-  "app_id": "51793f4b",
-  "v2": true,
-  "typescript": true
+  "integrations": {},
+  "type": "angular"
 }

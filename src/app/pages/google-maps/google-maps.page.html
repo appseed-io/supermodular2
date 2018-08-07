@@ -1,0 +1,24 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>Google maps</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+	<agm-map
+		style="width: 100%; height: 100%;"
+		[latitude]="origin.lat"
+		[longitude]="origin.lng"
+		[zoom]="zoom">
+		<agm-marker
+			*ngFor="let m of markers"
+			(markerClick)="clickedMarker(m.label)"
+			[latitude]="m.lat"
+			[longitude]="m.lng"
+			[label]="m.label">
+		</agm-marker>
+	</agm-map>
+</ion-content>
